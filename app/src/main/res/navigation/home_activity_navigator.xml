@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_activity_navigator"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rio.project12.view.home_activity_fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_rocketListFragment"
+            app:destination="@id/rocketListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_weatherPlaceListFragment"
+            app:destination="@id/weatherPlaceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketListFragment"
+        android:name="com.rio.project12.view.home_activity_fragments.RocketListFragment"
+        android:label="fragment_rocket_list"
+        tools:layout="@layout/fragment_rocket_list" >
+        <action
+            android:id="@+id/action_rocketListFragment_to_rocketInfoFragment"
+            app:destination="@id/rocketInfoFragment" />
+        <action
+            android:id="@+id/action_rocketListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDeepDetailsFragment"
+        android:name="com.rio.project12.view.home_activity_fragments.WeatherDeepDetailsFragment"
+        android:label="fragment_weather_deep_details"
+        tools:layout="@layout/fragment_weather_deep_details" >
+        <action
+            android:id="@+id/action_weatherDeepDetailsFragment_to_weatherPlaceListFragment"
+            app:destination="@id/weatherPlaceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherPlaceListFragment"
+        android:name="com.rio.project12.view.home_activity_fragments.WeatherPlaceListFragment"
+        android:label="WeatherPlaceListFragment" >
+        <action
+            android:id="@+id/action_weatherPlaceListFragment_to_weatherDeepDetailsFragment"
+            app:destination="@id/weatherDeepDetailsFragment" />
+        <action
+            android:id="@+id/action_weatherPlaceListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketInfoFragment"
+        android:name="com.rio.project12.view.home_activity_fragments.RocketInfoFragment"
+        android:label="RocketInfoFragment" >
+        <action
+            android:id="@+id/action_rocketInfoFragment_to_rocketListFragment"
+            app:destination="@id/rocketListFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,15 @@
+view:
+    HomeActivity
+
+    fragments:
+
+    adapter:
+
+view_model:
+
+model:
+    api_client:
+
+    database:
+
+    repository:
