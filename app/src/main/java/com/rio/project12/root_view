@@ -2,13 +2,28 @@ view:
     HomeActivity
 
     fragments:
+        HomeFragment
+        RocketListFragment
+        RocketInfoFragment
+        WeatherPlaceListFragment
+        WeatherDeepDetailsFragment
 
     adapter:
+        RocketListAdapter
+        WeatherPlaceListAdapter
 
 view_model:
+    RocketListViewModel
+    RocketInfoViewModel
+    WeatherPlaceListModel
+    WeatherDeepDetailsViewModel
+
 
 model:
     api_client:
+        RocketHistoryApiClient
+
+    pi_data_class:
 
     database:
 
