@@ -2,7 +2,6 @@ package com.rio.project12.model.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
-import androidx.room.Database
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -29,9 +28,11 @@ import androidx.room.Query
  */
 @Dao
 interface IRocketHistoryDAO {
-    @Query(/* value = */ "SELECT * FROM rocket_history_table")
-    fun getHistory(): LiveData<List<DRocketHistory>>
+    // method to fetch data from the database
+    @Query("SELECT * FROM rocket_history")
+    fun getAll():LiveData<List<DRocketHistory>>
 
+    // method to insert list of data into the database
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg dRocketHistory: DRocketHistory)
+    fun insertAll(vararg histories: DRocketHistory)
 }

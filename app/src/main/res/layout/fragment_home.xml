@@ -9,109 +9,125 @@
         tools:context=".view.home_activity_fragments.HomeFragment"
         android:background="@drawable/home_bg1">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rocketInfoCardView"
-            android:layout_width="370dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="150dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="10dp"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/rocketInfoCardView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#F8F5F5">
+                    android:layout_height="200dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_gravity="center">
 
-                    <ImageView
-                        android:id="@+id/rocketInfoImageView"
-                        android:layout_width="100dp"
-                        android:layout_height="102dp"
-                        android:src="@drawable/space_x"
-                        tools:src="@drawable/space_x" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#F8F5F5">
+
+                            <ImageView
+                                android:id="@+id/rocketInfoImageView"
+                                android:layout_width="100dp"
+                                android:layout_height="102dp"
+                                android:src="@drawable/space_x"
+                                tools:src="@drawable/space_x" />
 
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="50dp"
-                        android:text="Launch History"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textSize="20dp"
-                        android:textStyle="bold|italic" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:text="Launch History"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textSize="20dp"
+                                android:textStyle="bold|italic" />
+                        </LinearLayout>
 
-                <TextView
-                    android:layout_width="320dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:text="@string/you_want_to_wake_up_in_the_morning_and_think_the_future_is_going_to_be_great_and_that_s_what_being_a_space_faring_civilization_is_all_about"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                        <TextView
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/you_want_to_wake_up_in_the_morning_and_think_the_future_is_going_to_be_great_and_that_s_what_being_a_space_faring_civilization_is_all_about"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/weatherInfoCardView"
-            android:layout_width="370dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="80dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rocketInfoCardView">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/weatherInfoCardView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FAF6F6">
-
-                    <ImageView
-                        android:id="@+id/weatherInfoImageView"
-                        android:layout_width="100dp"
-                        android:layout_height="95dp"
-                        android:layout_marginStart="0dp"
-                        android:src="@drawable/weather_icon"
-                        tools:src="@drawable/weather_icon" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="50dp"
-                        android:text="Checkout Weather"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textSize="20dp"
-                        android:textStyle="bold|italic" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="320dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/red_sky_at_night_sailors_delight_red_sky_in_morning_sailors_take_warning"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FAF6F6">
+
+                            <ImageView
+                                android:id="@+id/weatherInfoImageView"
+                                android:layout_width="100dp"
+                                android:layout_height="95dp"
+                                android:layout_marginStart="0dp"
+                                android:src="@drawable/weather_icon"
+                                tools:src="@drawable/weather_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:text="Checkout Weather"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textSize="20dp"
+                                android:textStyle="bold|italic" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/red_sky_at_night_sailors_delight_red_sky_in_morning_sailors_take_warning"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </ScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

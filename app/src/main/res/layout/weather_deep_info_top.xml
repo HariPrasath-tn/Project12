@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="deepInfo"
+            type="com.rio.project12.view_model.WeatherDeepDetailsViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:elevation="5dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="18dp"
+        android:background="@color/cardview_shadow_end_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_shadow_end_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="serif-monospace"
+                android:text="@{deepInfo.place}"
+                android:textAlignment="center"
+                android:textColor="#D6DD1A1A"
+                android:textSize="34sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/weatherImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/loading"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:padding="5dp"
+                android:text="@{deepInfo.temperature}"
+                android:textColor="#000000"
+                android:textSize="40dp" />
+        </LinearLayout>
+        
+
+    </androidx.cardview.widget.CardView>
+</layout>

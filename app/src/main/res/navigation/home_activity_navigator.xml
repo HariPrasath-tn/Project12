@@ -14,8 +14,8 @@
             android:id="@+id/action_homeFragment_to_rocketListFragment"
             app:destination="@id/rocketListFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_weatherPlaceListFragment"
-            app:destination="@id/weatherPlaceListFragment" />
+            android:id="@+id/action_homeFragment_to_weatherDeepDetailsFragment"
+            app:destination="@id/weatherDeepDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/rocketListFragment"
@@ -35,18 +35,7 @@
         android:label="fragment_weather_deep_details"
         tools:layout="@layout/fragment_weather_deep_details" >
         <action
-            android:id="@+id/action_weatherDeepDetailsFragment_to_weatherPlaceListFragment"
-            app:destination="@id/weatherPlaceListFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/weatherPlaceListFragment"
-        android:name="com.rio.project12.view.home_activity_fragments.WeatherPlaceListFragment"
-        android:label="WeatherPlaceListFragment" >
-        <action
-            android:id="@+id/action_weatherPlaceListFragment_to_weatherDeepDetailsFragment"
-            app:destination="@id/weatherDeepDetailsFragment" />
-        <action
-            android:id="@+id/action_weatherPlaceListFragment_to_homeFragment"
+            android:id="@+id/action_weatherDeepDetailsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
@@ -56,5 +45,16 @@
         <action
             android:id="@+id/action_rocketInfoFragment_to_rocketListFragment"
             app:destination="@id/rocketListFragment" />
+        <action
+            android:id="@+id/action_rocketInfoFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.rio.project12.view.home_activity_fragments.WebViewFragment"
+        android:label="WebViewFragment" >
+        <action
+            android:id="@+id/action_webViewFragment_to_rocketInfoFragment"
+            app:destination="@id/rocketInfoFragment" />
     </fragment>
 </navigation>

@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
 
             //setting onClick listener for cardView weather
             weatherInfoCardView.setOnClickListener {
-                Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_weatherPlaceListFragment)
+                Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_weatherDeepDetailsFragment)
             }
         }
 

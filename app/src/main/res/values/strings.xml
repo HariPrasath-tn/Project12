@@ -6,4 +6,16 @@
     <string name="red_sky_at_night_sailors_delight_red_sky_in_morning_sailors_take_warning">Red sky at night, sailors delight. Red sky in morning, sailors take warning.</string>
     <string name="under_development_phase">Under Development phase</string>
     <string name="back">back</string>
+    <string name="id">ID</string>
+    <string name="date_utc">Date UTC</string>
+    <string name="id_info">ID</string>
+    <string name="rocket_name">Rocket Name</string>
+    <string name="details">Details</string>
+    <string name="wikipedia">Wikipedia</string>
+    <string name="article">Article</string>
+    <string name="rocket_successfully_launched">Rocket Successfully Launched</string>
+    <string name="wind_flow">Wind Flow</string>
+    <string name="description">Description</string>
+    <string name="air_quality">Air quality</string>
+    <string name="time_zone">Time Zone</string>
 </resources>
